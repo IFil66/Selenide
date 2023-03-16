@@ -12,21 +12,18 @@ import static com.codeborne.selenide.Condition.*;
 
 public class ChitaiGorodTest {
 
-  @BeforeAll
-  static void init() {
+//  @BeforeAll
+//  static void init() {
 //    SelenideLogger.addListener("allure", n);
-    Configuration.remote = "http://85.119.145.3:4444/wd/hub";
-    Configuration.browser = "firefox";
+//    Configuration.remote = "http://85.119.145.3:4444/wd/hub";
+//    Configuration.browser = "firefox";
 //    Configuration.browserVersion = "93.0";
 
-    var caps = new DesiredCapabilities();
-    var options = Map.<String, Object>of("enableVNC", true, "enableVideo", true);
-    caps.setCapability("selenoid:options", options);
-    Configuration.browserCapabilities = caps;
-
-
-
-  }
+//    var caps = new DesiredCapabilities();
+//    var options = Map.<String, Object>of("enableVNC", true, "enableVideo", true);
+//    caps.setCapability("selenoid:options", options);
+//    Configuration.browserCapabilities = caps;
+//  }
 
   private final String MAIN_PAGE_URL = "https://www.chitai-gorod.ru/";
 
@@ -37,7 +34,6 @@ public class ChitaiGorodTest {
     int numberCard = 1;
     String itemName;
 
-    Selenide.sleep(5000);
     // Переход на страницу магазина
     Selenide.open(MAIN_PAGE_URL);
 
@@ -46,7 +42,6 @@ public class ChitaiGorodTest {
 
     // Проверяем, что первый товар в результатах поиска в названии содержит текст запроса
     new SearchResultWidget().getElement(numberCard).shouldHave(text(productName));
-
 
     // Переходим в карточку первого товара (предварительно сохраняем название корточки в поиске)
     itemName = new SearchResultWidget().getItemName(numberCard);
@@ -65,11 +60,6 @@ public class ChitaiGorodTest {
     // 2. У иконки корзины появилась цифра с соответствующим количеством товара
     new ProductCard().counterProductsOfBasket.should(visible).shouldHave(text("1"));
 
-
-
-
-
-
     // Переходим в корзину по кнопке "Оформить заказ"
     new ProductCard().buttonBuy.click();
 
@@ -78,9 +68,6 @@ public class ChitaiGorodTest {
 
     // Проверяем, что название товара в корзине соответствует названию выбранного товара.
     new Basket().cartItems.get(0).$(".product-title__head").shouldHave(text(itemName));
-
-
-
 
     // Перейти к оформлению товара - нажать на кнопку "Перейти к оформлению"
     new Basket().orderButton.click();

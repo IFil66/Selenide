@@ -6,7 +6,6 @@ public class SearchResultWidget {
 
   ElementsCollection products = Selenide.$$("[data-chg-product-id]");
 //  SelenideElement itemTitle = Selenide.$("product-title__head");
-  private final
 
 
   public SelenideElement getElement(int number) {
