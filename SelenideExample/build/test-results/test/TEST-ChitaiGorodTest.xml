@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ChitaiGorodTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-13T11:05:21" hostname="LOGRUS-PS" time="28.538">
+  <properties/>
+  <testcase name="buyBook()" classname="ChitaiGorodTest" time="28.538"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[Test worker] INFO com.codeborne.selenide.webdriver.BrowserResizer - Set browser size to 1366x768
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=firefox Version=94.0 Platform=LINUX
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.12.2
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.8.1 build revision: 8ebccac989
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: firefox on LINUX (29d578ea-b436-41f7-91ca-b858d1bdbceb)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=RemoteWebDriver: firefox on LINUX (29d578ea-b436-41f7-91ca-b858d1bdbceb),proxy=null,downloadsFolder=null] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+]]></system-err>
+</testsuite>
